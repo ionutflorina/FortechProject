@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search for Country">
+    </div>
+    <div class="filter-comp">
+        Filter by:
+        <input type="text" [(ngModel)]="filterReg" class="form-control" placeholder="Filter by region">
+        <input type="text" [(ngModel)]="filterLang" class="form-control" placeholder="Filter by language">
+        <input type="text" [(ngModel)]="filterTime" class="form-control" placeholder="Filter by time zone">
+        <input type="text" [(ngModel)]="filterCurrency" class="form-control" placeholder="Filter by currencies">
+    </div>
+
+
+    <div class="container-card ">
+        <div *ngFor='let country of allCountries | search : searchText : searchableList | filterRegion : filterReg | filterLanguages : filterLang | filterTimezone : filterTime | filterCurrencies : filterCurrency' class="card ">
+            <div class="card-header" (click)="onClickCard(country.name)">
+                {{country.name}}
+                <img class="flag " src="{{country.flag}} " alt="flag {{country.name}} " />
+            </div>
+            <ul class="list-group list-group-flush ">
+                <li class="list-group-item ">Capital: <span>{{country.capital}}</span> </li>
+                <li class="list-group-item ">Region: <span>{{country.region}}</span></li>
+                <li class="list-group-item ">Population: <span> {{country.population}} </span></li>
+            </ul>
+        </div>
+    </div>
+</div>

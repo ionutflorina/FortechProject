@@ -1,0 +1,49 @@
+span {
+    float: right;
+}
+
+.card-header:hover {
+    background-color: #dcdcdc;
+}
+
+.flag {
+    width: 40px;
+    height: 20px;
+    float: right;
+}
+
+div.card {
+    width: 18rem;
+    display: inline-block;
+    margin: 10px 10px 10px 10px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.container-card {
+    position: absolute;
+    justify-content: center;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.filter-comp {
+    margin-top: 20px;
+    width: 30%;
+}

@@ -1,0 +1,17 @@
+<div *ngFor='let c of country'>
+    <ul class="list-group list-group-flush ">
+        {{c.name}}
+        <li class="list-group-item ">Flag:<img class="flag" src="{{c.flag}}"> </li>
+        <li class="list-group-item ">alpha2Coode: <span>{{c.alpha2Code}}</span></li>
+        <li class="list-group-item ">Capital: <span> {{c.capital}} </span></li>
+        <li class="list-group-item ">Region: <span> {{c.population}} </span></li>
+        <li class="list-group-item ">Population: <span> {{c.region}} </span></li>
+        <li class="list-group-item ">Population: <span> {{c.population}} </span></li>
+        <li class="list-group-item ">LatLng: <span> {{c.latlng}} </span></li>
+        <li class="list-group-item ">Area: <span> {{c.area}} </span></li>
+        <li class="list-group-item ">Timezones: <span> {{c.timezones}} </span></li>
+        <li class="list-group-item ">Neighbours: <span> {{c.borders}} </span></li>
+        <li class="list-group-item ">Currencies: <span> {{c.currencies[0].name}} </span></li>
+        <li class="list-group-item ">Official languages: <span> {{c.languages[0].name}} </span></li>
+    </ul>
+</div>
